@@ -6,7 +6,7 @@
 
     <changeSet id="social-1" author="srufanov">
         <comment>Basic db structure added</comment>
-        <sqlFile dbms="postgresql" path="sql/.sql" relativeToChangelogFile="true"/>
+        <sqlFile dbms="postgresql" path="sql/base-entities.sql" relativeToChangelogFile="true"/>
     </changeSet>
 
 </databaseChangeLog>
