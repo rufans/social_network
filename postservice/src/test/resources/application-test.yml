@@ -1,11 +1,11 @@
 server:
-  port: 54444
+  port: 54445
 
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${US_DATABASE}
-    username: ${US_DB_USER}
-    password: ${US_DB_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/social_post_service
+    username: social_post_test
+    password: social_post_test_password
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
