@@ -1,0 +1,16 @@
+server:
+  port: 54446
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${LS_DATABASE}
+    username: ${LS_DB_USER}
+    password: ${LS_DB_PASSWORD}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate.ddl-auto: none
+    properties.hibernate.temp.use_jdbc_metadata_defaults: false
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml

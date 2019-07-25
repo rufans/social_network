@@ -1,6 +1,6 @@
-package com.srufanov.socialnetwork.postservice.config.exception;
+package com.srufanov.socialnetwork.likeservice.config.exception;
 
-import com.srufanov.socialnetwork.postservice.exception.PostServiceException;
+import com.srufanov.socialnetwork.likeservice.exception.LikeServiceException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +17,8 @@ import java.util.Date;
 @Slf4j
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(PostServiceException.class)
-    public final ResponseEntity<ExceptionResponse> handlePostServiceExceptions(PostServiceException ex, WebRequest request) {
+    @ExceptionHandler(LikeServiceException.class)
+    public final ResponseEntity<ExceptionResponse> handleLikeServiceExceptions(LikeServiceException ex, WebRequest request) {
         ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
                 request.getDescription(false));
         return new ResponseEntity<>(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
