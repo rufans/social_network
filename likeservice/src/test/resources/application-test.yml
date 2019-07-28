@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/social_like_service
+    url: jdbc:postgresql://localhost:5432/social_like_service_test
     username: social_like_test
     password: social_like_test_password
   jpa:
