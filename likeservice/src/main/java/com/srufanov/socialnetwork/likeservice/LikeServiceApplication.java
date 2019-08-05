@@ -1,13 +1,13 @@
-package com.srufanov.socialnetwork.userservice;
+package com.srufanov.socialnetwork.likeservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Main {
+public class LikeServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(LikeServiceApplication.class, args);
     }
 
 }

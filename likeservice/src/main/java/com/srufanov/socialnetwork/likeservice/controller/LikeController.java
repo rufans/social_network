@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
+@RequestMapping("/api/v1/like")
 public class LikeController {
 
     private final LikeService likeService;
@@ -16,12 +17,12 @@ public class LikeController {
         this.likeService = likeService;
     }
 
-    @PostMapping(value = "/api/like")
+    @PostMapping
     public void handleLikeAction(@Valid @RequestBody LikeActionRequest request) {
         likeService.handleLikeAction(request.getPostId(), request.getUserId());
     }
 
-    @GetMapping(value = "api/like/count")
+    @GetMapping(value = "count")
     public LikeCountResponse getLikesCountForPost(@RequestParam Long postId) {
         return new LikeCountResponse(likeService.getLikeCountForPost(postId));
     }

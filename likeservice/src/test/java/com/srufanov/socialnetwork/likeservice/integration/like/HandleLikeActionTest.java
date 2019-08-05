@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 public class HandleLikeActionTest extends AbstractIntegrationTest {
 
-    private static final String LIKE_ACTION_URI = "/api/like/";
+    private static final String LIKE_ACTION_URI = "/api/v1/like/";
 
     @Test
     public void handleLikeActionWithEmptyPostId() throws Exception {

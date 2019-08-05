@@ -1,5 +1,6 @@
 package com.srufanov.socialnetwork.postservice.config.exception;
 
+import com.srufanov.socialnetwork.postservice.exception.PostNotFoundException;
 import com.srufanov.socialnetwork.postservice.exception.PostServiceException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -17,10 +18,19 @@ import java.util.Date;
 @Slf4j
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
+    @ExceptionHandler(PostNotFoundException.class)
+    public final ResponseEntity<ExceptionResponse> handlePostNotFoundExceptions(PostNotFoundException ex, WebRequest request) {
+        ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
+                request.getDescription(false));
+        log.error(ex.getMessage(), ex);
+        return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(PostServiceException.class)
     public final ResponseEntity<ExceptionResponse> handlePostServiceExceptions(PostServiceException ex, WebRequest request) {
         ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
                 request.getDescription(false));
+        log.error(ex.getMessage(), ex);
         return new ResponseEntity<>(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

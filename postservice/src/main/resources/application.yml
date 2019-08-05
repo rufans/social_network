@@ -14,3 +14,7 @@ spring:
   liquibase:
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.xml
+
+#post
+post:
+  image-path: ${POST_IMAGE_STORAGE_PATH}

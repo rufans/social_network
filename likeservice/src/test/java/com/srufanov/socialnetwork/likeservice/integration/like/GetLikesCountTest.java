@@ -13,7 +13,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class GetLikesCountTest extends AbstractIntegrationTest {
 
-    private static final String LIKE_ACTION_URI = "/api/like/count?postId=%s";
+    private static final String LIKE_ACTION_URI = "/api/v1/like/count?postId=%s";
 
     @Test
     public void getLikesCountSuccessfully() throws Exception {
