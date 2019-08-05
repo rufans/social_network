@@ -1,7 +1,7 @@
 # social_network
 Test project with microservices architecture (Spring Boot, Spring Cloud, Docker)
 
-###User service setup:
+### User service setup:
 
 1. create db users
 social_user
@@ -23,7 +23,7 @@ US_DB_PASSWORD = social_user_password
 ---
 
 
-###Post service setup:
+### Post service setup:
 
 1. create db users
 social_post
@@ -45,7 +45,7 @@ PS_DB_PASSWORD = social_post_password
 ---
 
 
-###Like service setup:
+### Like service setup:
 
 1. create db users
 social_like
@@ -64,3 +64,7 @@ DB_PORT = 5432
 LS_DATABASE = social_like_service
 LS_DB_USER = social_like
 LS_DB_PASSWORD = social_like_password
+---
+
+Postman collection to test API:
+https://www.getpostman.com/collections/8af0e4708cf549f0fcfb
