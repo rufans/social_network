@@ -59,4 +59,5 @@ public class SwaggerConfiguration {
                 .description("REST API Documentation")
                 .build();
     }
+
 }

@@ -14,6 +14,11 @@ public class ExceptionResponse {
         this.details = details;
     }
 
+    public ExceptionResponse(Date timestamp, String message) {
+        this.timestamp = timestamp;
+        this.message = message;
+    }
+
     public Date getTimestamp() {
         return timestamp;
     }
